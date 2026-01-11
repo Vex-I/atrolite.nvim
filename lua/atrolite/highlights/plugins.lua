@@ -81,8 +81,6 @@ function M.setup(c, opts)
         bold = true,
     })
 
-<<<<<<< HEAD
-=======
     hl("NvimTreeStatusLine", {
         bg = c.black,
     })
@@ -90,9 +88,6 @@ function M.setup(c, opts)
     hl("NvimTreeStatusLineNC", {
         bg = c.black,
     })
-
->>>>>>> 05042f4 (Implemented Bufferline integration, lualine fix.)
-
 
     --indent
     hl("IblIndent", {fg = c.dark_grey})
