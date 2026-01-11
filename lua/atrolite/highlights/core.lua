@@ -5,7 +5,7 @@ local function hl(group, opts)
 end
 
 function M.setup(c, opts)
-    local bg = opts.transparent and "NONE" or c.black;
+    local bg = opts.transparent and "NONE" or c.black
 
     -- Editor
     hl("Normal", { fg = c.white, bg = bg })

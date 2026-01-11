@@ -19,3 +19,10 @@ basic integration with `lualine.nvim` and `nvim-tree`.
 }
 ```
 
+## Configuration
+```lua 
+require('atrolite').setup({
+    transparent = true, --removes background
+})
+```
+

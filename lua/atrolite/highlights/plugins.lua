@@ -5,13 +5,14 @@ local function hl(group, opts)
 end
 
 --TODO: Seperate into different group
-function M.setup(c)
+function M.setup(c, opts)
+    local bg = opts.transparent and "NONE" or c.black
     -- Telescope
-    hl("TelescopeNormal", { fg = c.white, bg = c.black })
+    hl("TelescopeNormal", { fg = c.white, bg = bg })
     hl("TelescopeBorder", { fg = c.cream})
 
     -- NvimTree
-    hl("NvimTreeNormal", {fg = c.white, bg = c.black})
+    hl("NvimTreeNormal", {fg = c.white, bg = bg})
     hl("NvimTreeFolderName", {fg = c.blue})
     hl("NvimTreeOpenedFolderName", {fg = c.dark_blue})
 
@@ -43,6 +44,44 @@ function M.setup(c)
     hl("CmpItemMenu", { fg = c.grey})
 
     --bufferline
+    hl("BufferLineFill", {bg = c.black})
+
+    hl("BufferLineBuffer", {fg = c.white, bg = c.grey })
+    hl("BufferLineBufferSelected", {
+        fg = c.cream,
+        bg = c.grey,
+        underline = true,
+        bold = true 
+    })
+
+    hl("BufferLineSeparator", { fg = c.black, bg = c.black})
+    hl("BufferLineSeparatorSelected", { fg = c.black, bg = c.black})
+
+    hl("BufferLineCloseButton",         { fg = c.white,  bg = c.grey })
+    hl("BufferLineCloseButtonSelected", {
+        fg = c.cream,
+        bg = c.grey,
+        underline = true,
+        bold = true 
+    })
+    
+    hl("BufferLineModified",         { fg = c.cream, bg = c.grey })
+    hl("BufferLineModifiedVisible",  { fg = c.cream, bg = c.grey })
+    hl("BufferLineModifiedSelected", {
+        fg = c.cream,
+        bg = c.grey,
+        underline = true,
+        bold = true 
+    })
+    hl("BufferLineIcon", {bg = c.grey })
+    hl("BufferLineTruncMarker", {bg = c.grey })
+    hl("BufferLineOffset", {
+        fg = c.grey,
+        bg = c.grey,
+        bold = true,
+    })
+
+
 
     --indent
     hl("IblIndent", {fg = c.dark_grey})
