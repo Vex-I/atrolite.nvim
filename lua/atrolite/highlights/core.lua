@@ -15,10 +15,66 @@ function M.setup(c, opts)
 
     -- Syntax
     hl("Keyword", { fg = c.red })
-    hl("Function", { fg = c.blue })
-    hl("Type", { fg = c.dark_blue })
-    hl("String", { fg = c.dark_green })
+    hl("Function", { fg = c.dark_green, bold = true})
+    hl("Type", { fg = c.blue})
     hl("Number", { fg = c.green })
+
+    hl("Special",       { fg = c.red })
+
+    hl("Todo",          {
+        fg = c.black,
+        bg = c.cream,
+        bold = true,
+        italic = true,
+    })
+
+    hl("Done",          {
+        fg = c.red,
+        bold = true,
+        italic = true,
+    })
+
+    hl("Error",         {
+        fg = c.red,
+        bold = true,
+        reverse = true,
+    })
+
+    hl("Statement",     { fg = c.red })
+    hl("Conditional",   { fg = c.red })
+    hl("Repeat",        { fg = c.red })
+    hl("Label",         { fg = c.red })
+    hl("Exception",     { fg = c.red })
+
+    hl("Operator",      {
+        fg = c.red,
+        italic = true,
+    })
+
+
+    hl("Identifier",    { fg = c.blue })
+
+    hl("PreProc",       { fg = c.blue })
+    hl("Include",       { fg = c.blue })
+    hl("Define",        { fg = c.blue })
+    hl("Macro",         { fg = c.blue })
+    hl("PreCondit",     { fg = c.blue })
+
+    hl("Constant",      { fg = c.green })
+    hl("Character",     { fg = c.dark_green, italic= true })
+    hl("Boolean",       { fg = c.blue })
+    hl("Float",         { fg = c.green })
+
+    hl("String",        {
+        fg = c.dark_green,
+        italic = true,
+    })
+
+    hl("Typedef",       { fg = c.dark_blue})
+
+    hl("StorageClass",  { fg = c.red })
+    hl("Structure",     { fg = c.blue })
+
 end
 
 return M
